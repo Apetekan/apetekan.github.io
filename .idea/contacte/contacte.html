@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacte</title>
+    <style>
+  svg {
+    width: 500px;
+    height: 250px;
+    background-color: aqua;
+  }
+  </style>
+</head>
+<body>
+<svg viewBox="0 0 1000 500">
+    <defs>
+        <filter id="MyFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="1000" height="500">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#17173b" result="specOut">
+                <fePointLight x="-5000" y="-10000" z="20000" />
+            </feSpecularLighting>
+            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+            <feMerge>
+                <feMergeNode in="offsetBlur" />
+                <feMergeNode in="litPaint" />
+            </feMerge>
+        </filter>
+        <radialGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="90%" style="stop-color:#cc0000;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+        </radialGradient>
+        <radialGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="50%" style="stop-color:yellow;stop-opacity:1" />
+            <stop offset="95%" style="stop-color:#cc0000;stop-opacity:1" />
+        </radialGradient>
+    </defs>
+    <g filter="url(#MyFilter)">
+        <ellipse cx="500" cy="250" rx="490" ry="220" fill="url(#grad1)" />
+        <ellipse cx="500" cy="250" rx="400" ry="200" fill="url(#grad2)" />
+        <text fill="darkgrey" font-size="120" font-family="Times" x="375" y="170" stroke="#17173b" stroke-width="0.5">J.F.M.<tspan x="240" y="250" font-size="80">INFORMÀTICA</tspan></text>
+        <rect x="450" y="270" ry="10" width="120" height="90" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="460" y="280" ry="10" width="100" height="70" style="fill:grey;stroke: black;stroke-width:2" />
+        <path d="M440 380 L580 380 L600 425 L420 425  Z" stroke="black" stroke-width="2" fill="black"/>
+        <rect x="490" y="360" ry="5" width="40" height="20" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <circle cx="480" cy="310" r="15" stroke="black" stroke-width="2" fill="white" />
+        <circle cx="540" cy="310" r="15" stroke="black" stroke-width="2" fill="white" />
+        <circle cx="480" cy="310" r="3" stroke="black" fill="black" />
+        <circle cx="540" cy="310" r="3" stroke="black" fill="black" />
+
+        <path d="M 470 330 Q 500 350 550 330" stroke="black" stroke-width="2" fill="none"/>
+
+        <path d="M 434 394 Q 350 380 350 300" stroke="black" stroke-width="9" fill="none"/>
+        <path d="M 335 300 Q 355 345 365 300" stroke="black" stroke-width="9" fill="black"/>
+        <line x1="340" y1="300" x2="340" y2="285" style="stroke: black;stroke-width:7 " />
+        <line x1="360" y1="300" x2="360" y2="285" style="stroke: black;stroke-width:7 " />
+
+        <path d="M 586 394 Q 650 380 670 300" stroke="black" stroke-width="9" fill="none"/>
+
+        <ellipse cx="663" cy="300" rx="20" ry="30" style="fill:black;" />
+
+        <polyline points="645,300 663,300 663,273 663,300 680 300" style="stroke: white; stroke-width: 1" />
+
+        <rect x="453" y="390" width="15" height="15" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="473" y="390" width="15" height="15" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="493" y="390" width="15" height="15" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="513" y="390" width="15" height="15" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="533" y="390" width="15" height="15" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="553" y="390" width="15" height="15" style="fill:#ededf8;stroke: black;stroke-width:2" />
+        <rect x="460" y="410" width="100" height="12" style="fill:#ededf8;stroke: black;stroke-width:2" />
+
+    </g>
+</svg>
+</body>
+</html>
