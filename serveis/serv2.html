@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SVG flower</title>
+</head>
+<body>
+    <svg id="dibuix" width="600" height="600" viewbox="0 0 1000 1000" stroke="black" stroke-width="2">
+        <defs>
+            <radialGradient id="radial">
+                <stop offset="0%" stop-color="yellow"/>
+                <stop offset="25%" stop-color="red"/>
+                <stop offset="100%" stop-color="black"/>
+            </radialGradient>
+        </defs>    
+    </svg>
+</body>
+<script>
+var svgDibuix = document.querySelector("#dibuix");
+var nameSpace = "http://www.w3.org/2000/svg";
+
+function punto(x, y, angle, radi) {
+    var xx = x + radi * Math.cos(angle);
+    var yy = y + radi * Math.sin(angle);
+    return " " + xx + " " + yy;
+}
+
+
+function flower(x, y, petals, radi, r, g, b) {
+    var beta = 2 * Math.PI / petals;
+    var angle = beta / 2;
+    var tmpString = "M" + punto(x, y, angle, 0.1 * radi);
+    for (var i = 0; i < petals; i++) {
+        tmpString += "C" + punto(x, y, angle, radi);
+        angle += beta;
+        tmpString += punto(x, y, angle, radi) + punto(x, y, angle, 0.1 * radi);
+    }
+    var shape = document.createElementNS(nameSpace, "path");
+    shape.setAttribute("d", tmpString);
+//    shape.setAttribute("fill", "rgb(" + r + "," + g + "," + b + ")");
+    shape.setAttribute("fill", "url(#radial)");
+    svgDibuix.appendChild(shape);
+}
+
+function principal(cuantes) {
+    for (var i = 0; i < cuantes; i++) {
+        var x = 100 + 800 * Math.random();
+        var y = 100 + 800 * Math.random();
+        var petals = 5 + Math.floor(0.5 + 3 * Math.random());
+
+
+        /**/
+        var r = Math.floor(60 + 190 * Math.random());
+        var g = Math.floor(60 + 190 * Math.random());
+        var b = Math.floor(60 + 190 * Math.random());
+        /**/
+        /*
+        var r = Math.floor(255.5 * Math.random());
+        var g = Math.floor(255.5 * Math.random());
+        var b = Math.floor(255.5 * Math.random());
+        */
+        /*
+        var r = 255 * Math.floor(0.5 + Math.random());
+        var g = 255 * Math.floor(0.5 + Math.random());
+        var b = 255 * Math.floor(0.5 + Math.random());
+        */
+        flower(x, y, petals, 100, r, g, b);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", principal(100));
+</script>
+</html>

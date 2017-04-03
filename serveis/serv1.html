@@ -1,0 +1,171 @@
+<!doctype html> <!-- usa el html5 (y anteriores)	-->
+<html lang="es_ES">
+<head>
+<meta charset="utf-8"/> 			<!--	arregla acentos y simbologia con unicode		-->
+<title>Horari</title>			<!-- Tittulo de la pagina/pestaña -->
+<style>
+	body {
+		background-color: white;
+	}
+	td {
+		text-align: center;
+	}
+	#horari {
+		background-color: orange;
+		color: black;
+		width: 50px;
+	}
+	.dies {
+		width: 140px;
+		background-color: black;
+		color: white;
+	}
+	.hores {
+		height: 60px;
+		background-color: black;
+		color: white;
+	}
+	.lmg {
+		background-color: #ff8142;
+		color: #26130a;
+	} 
+	.iso {
+		background-color: #ff6699;
+		color: #330011;
+	}
+	.gbd {
+		background-color: #cc66ff;
+		color: #220033;
+	}
+	.fol {
+		background-color:#73e600;
+		color: #1a3300;
+	}
+	.pax {
+		background-color: #ffff66;
+		color: #333300;
+	}
+	.fom {
+		background-color: #5cd6d6;
+		color: #0a2929;
+	}
+
+</style>
+</head>				<!--	COMENTARIOS		-->
+<body background="imagenes/fondo.jpg">															<!-- background="fondo.jpg"-->	
+<center>																				<!---->
+<h1><b>HORARI C.F.G.S. Administració de Sistemas Informátics en Xarxa</b></h1>	 		<!---->
+<table> 																				<!---->
+<tr>			<!--	HORAS/dias -->
+	<td id="horari"><b>Horari</b></font></td>			<!--	 HORAS		-->
+	<td class="dies"><b>Dilluns</b></font></td>			<!--	 LUNES		-->
+	<td class="dies"><b>Dimarts</b></font></td>			<!--	 MARTES		-->
+	<td class="dies"><b>Dimecres</b></font></td>		<!--	 MIERDOLES	-->
+	<td class="dies"><b>Dijous</b></font></td>			<!--	 JUEVES		-->
+	<td class="dies"><b>Divendres</b></font></td>		<!--	 VIERNES	-->
+</tr>
+<!---->
+<tr>			<!--	15:20 - 16:10 -->
+	<td class="hores"><b>15:20<br>16:10</b></font></td>							
+	<td class="lmg" rowspan="2">Llenguatges de marcas<br>i sistemes de gestio<br>d' informacio <b>(LMG)</b></font></td>
+	<td class="iso" rowspan="2">Implantacio<br>de sistemes operatius <b>(ISO)</b></font></td>
+	<td class="gbd" rowspan="2">Sist. Gestors<br>de Bases de Dades <b>(GBD)</b></font></td>
+	<td class="iso">Implantacio<br>de sistemes operatius <b>(ISO)</b></font></td>
+	<td class="fol" rowspan="2">Formacio<br>i Orientacio<br>Laboral <b>(FOL)</b></font></td>
+</tr>
+<!---->
+<tr>			<!--	16:10 - 17:00  -->
+	<td class="hores"><b>16:10<br>17:00</b></font></td>	
+	<td class="gbd" rowspan="3">Sist. Gestors<br>de Bases de Dades <b>(GBD)</b></font></td>
+	
+</tr>
+<!---->
+<tr>			<!--	17:20 - 18:10  -->
+	<td class="hores"><b>17:20<br>18:10</b></font></td>	
+	<td class="iso" rowspan="2">Implantacio<br>de sistemes operatius <b>(ISO)</b></font></td>
+	<td class="pax">Planificacio<br>i Adm. Xarxes <b>(PAX)</b></td>
+	<td class="lmg" rowspan="2">Llenguatges de marcas<br>i sistemes de gestio<br>d' informacio <b>(LMG)</b></font></td>
+	<td class="gbd">Sist. Gestors<br>de Bases de Dades <b>(GBD)</b></font></td>
+</tr>
+<!---->
+<tr>			<!--	18:10 - 19:00  -->
+	<td class="hores"><b>18:10<br>19:00</b></font></td>
+	<td class="gbd" rowspan="2">Sist. Gestors<br>de Bases de Dades <b>(GBD)</b></font></td>
+	<td class="fom" rowspan="3">Fonamets<br>de maquinari <b>(FOM)</b></font></font></td>
+</tr>
+<!---->
+
+<tr>			<!--	19:20 20:10  -->
+	<td class="hores"><b>19:20<br>20:10</b></font></td>	
+	<td class="pax" rowspan="2">Planificacio<br>i Adm. Xarxes <b>(PAX)</b></font></td>
+	<td class="iso" rowspan="2">Implantacio<br>de sistemes operatius <b>(ISO)</b></font></td>
+	<td class="pax" rowspan="2">Planificacio<br>i Adm. Xarxes <b>(PAX)</b></font></td>
+</tr>
+
+<tr>			<!--	20:10 21:00 -->
+	<td class="hores"><b>20:10<br>21:00</b></font></td>	
+	<td class="fol">Formacio<br>i Orientacio<br>Laboral <b>(FOL)</b></font></td>
+</tr>
+
+
+</table>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+<!--	
+
+	<td bgcolor="ff6699" align="center"><font color="330011">Implantacio de<br>sistemes operatius <b>(ISO)</b></td>
+	<td bgcolor="cc66ff" align="center"><font color="220033">Sist. Gestors de<br>Bases de Dades <b>(GBD)</b></td>
+	<td bgcolor="ffcc66" align="center"><font color="332200">Llenguatges de marcas<br>i sistemes de gestio<br>d' informacio <b>(LMG)</b></td>
+	<td bgcolor="73e600" align="center"><font color="1a3300">Formacio i<br>Orientacio<br>Laboral <b>(FOL)</b></td>
+	<td bgcolor="5cd6d6" align="center"><font color="0a2929">Fonamets de<br>maquinari <b>(FOM)</b></font></td>
+	<td bgcolor="ffff66" align="center"><font color="333300">Planificacio i<br>Adm. Xarxes <b>(PAX)</b></td>
+
+-->
+
+
+
+
+			<!--
+
+
+Fonamets de<br>maquinari <b>(FOM)</b>
+Sist. Gestors de<br>Bases de Dades <b>(GBD)</b>
+Formacio i<br>Orientacio<br>Laboral <b>(FOL)</b>
+Planificacio i<br>Adm. Xarxes <b>(PAX)</b>
+Implantacio de<br>sistemes operatius <b>(ISO)</b>
+Llenguatges de marcas<br>i sistemes de gestio<br>d' informacio <b>(LMG)</b>
+-->
+			<!--
+
+			TAMAÑO FUENTE (NIVELES DE CONTENIDO)		
+<h1>Header Level one</h1>				TAMAÑO FUENTE (NIVELES DE CONTENIDO)				
+<h2>Header Level two</h2>
+<h3>Header Level three</h3>	
+<h4>Header Level four</h4>				TAMAÑO normal		
+<h5>Header Level five</h5>	
+<h6>Header Level six</h6>				TAMAÑO pies de foto, citas, "Letra pequeña"		
+			
+
+
+			TIPOLOGIA
+
+<XXX size=""> 1-6
+<XXX color="">
+<XXX bgcolor="11AAFF">		BackGroundColor FONDO
+<XXX align="center">		alineado center | left | right
+<b>Negrita</b> 		NEGRITA!!!
+<i>cursiva</i> 		CURSIVA!!! "italica"
+<em>EMFASIVE</em>	enfatizar, RESALTAR
+<p>PARRAFO</p>		<p align="left|right|center|justify"> </p>	
+
+
+
+
+			-->
